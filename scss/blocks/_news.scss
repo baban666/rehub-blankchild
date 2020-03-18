@@ -1,0 +1,224 @@
+.grid-banner {
+  display: grid;
+  grid-template-columns:  repeat(auto-fit, 1fr 1fr 1fr) ;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+
+
+  .item {
+
+    background-image: url("../img/fonstola.ru-140070.jpg");
+    position: relative;
+    overflow: hidden;
+
+    .post-date, .post-title, .exerpt{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+
+
+    img{
+      background-size: cover;
+    }
+
+    &:nth-child(1) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      width: 660px;
+      height: auto;
+min-height: 300px;
+    }
+
+    &:nth-child(2) {
+      grid-column-start: 3;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 1;
+      width: 540px;
+      height: auto;
+      min-height: 150px;
+    }
+    &:nth-child(3) {
+      grid-column-start: 3;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 2;
+      width: 540px;
+      height: auto;
+      min-height: 150px;
+    }
+    &:nth-child(4) {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 3;
+      grid-row-end: 3;
+      width: 540px;
+      height: auto;
+      min-height: 150px;
+    }
+    &:nth-child(5) {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 4;
+      grid-row-end: 4;
+      width: 540px;
+      height: auto;
+      min-height: 150px;
+    }
+    &:nth-child(6) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 3;
+      grid-row-end: 5;
+      width: 660px;
+      height: auto;
+      min-height: 300px;
+    }
+
+  }
+
+
+}
+
+body {
+   margin: 0;
+   padding: 48px;
+   box-sizing: border-box;
+   background: lightgrey;
+ }
+
+.grid {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-areas:
+          "hero hero medium medium"
+          "hero hero small1 small2"
+          "small3 medium2 medium2 small4";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(100px, 200px) minmax(100px, 200px) minmax(
+                  100px,
+                  200px
+  );
+}
+
+.grid__cell {
+  background: linear-gradient(
+                  90deg,
+                  rgba(25, 43, 63, 0.8) 0%,
+                  rgba(25, 43, 63, 0.9) 100%
+  ),
+  url(https://www.demilked.com/magazine/wp-content/uploads/2016/08/20th-century-london-fog-vintage-photography-1.jpg);
+  background-size: cover;
+  border: 0px solid white;
+  transition: border 0.24s ease-in;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.grid__cell:hover {
+  border: 20px solid rgba(255, 255, 255, 0.85);
+}
+
+.grid__cell--hero {
+  grid-area: hero;
+  font-size: 128px;
+}
+.grid__cell--medium1 {
+  grid-area: medium;
+  font-size: 64px;
+}
+.grid__cell--medium2 {
+  grid-area: medium2;
+  font-size: 64px;
+}
+
+.grid__cell--small1 {
+  grid-area: small1;
+  font-size: 54px;
+}
+
+.grid__cell--small2 {
+  grid-area: small2;
+  font-size: 54px;
+}
+.grid__cell--small3 {
+  grid-area: small3;
+  font-size: 54px;
+}
+.grid__cell--small4 {
+  grid-area: small4;
+  font-size: 54px;
+}
+
+.cell__mask {
+  background: url(https://www.demilked.com/magazine/wp-content/uploads/2016/08/20th-century-london-fog-vintage-photography-1.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr 1fr 1fr 1fr 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:  "main main main two two"
+                        "main main main tree tree"
+                        "four four six six six"
+                        "five five six six six";
+  grid-gap: 20px;
+}
+
+.main {
+  grid-area: main;
+  background-image: url("../img/zwalls.ru-41400.jpg");
+  min-height: 400px;
+}
+
+.two {
+  grid-area: two;
+  background-image: url("../img/zwalls.ru-41400.jpg");
+}
+
+.tree {
+  grid-area: tree;
+  background-image: url("../img/zwalls.ru-41400.jpg");
+}
+
+.six {
+  grid-area: six;
+  background-image: url("../img/zwalls.ru-41400.jpg");
+}
+
+.four {
+  grid-area: four;
+  background-image: url("../img/zwalls.ru-41400.jpg");
+}
+
+.five {
+  grid-area: five;
+  background-image: url("../img/zwalls.ru-41400.jpg");
+}

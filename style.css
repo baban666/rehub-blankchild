@@ -1,0 +1,59 @@
+/*
+	Theme Name: Rehub child theme
+	Theme URI: https://wpsoul.com
+	Description: A Hybrid magazine/shop/review/news Wordpress Theme
+	Author: Sizam
+	Author URI: https://wpsoul.com
+	Version: 9.4
+	Template: rehub-theme
+*/
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+@keyframes animatedBackground {
+  from {
+    background-position: top;
+  }
+  to {
+    background-position: bottom;
+  }
+}
+body {
+
+  animation: animatedBackground 30s linear 2s infinite reverse;
+}
+
+
+@media (min-width: 320px) and (max-width: 460px){
+body, body.dark_body {
+animation: animatedBackground 20s linear 2s infinite;
+    background-image: url(/wp-content/uploads/2020/01/bg_mob375_2.jpg) !important;
+}
+}
+
+
+@media (min-width: 461px) and (max-width: 600px){
+body, body.dark_body {
+animation: animatedBackground 20s linear 2s infinite;
+    background-image: url(/wp-content/uploads/2019/12/bd_1_new_mobile4.jpg) !important;
+}
+}
+
+@media (min-width: 980px) and (max-width: 1200px){
+body, body.dark_body {
+animation: animatedBackground 20s linear 2s infinite;
+    background-image: url(/wp-content/uploads/2019/12/bd_1_new_tablet4.jpg) !important;
+}
+}
+
+@media (min-width: 601px) and (max-width: 979px){
+body, body.dark_body {
+animation: animatedBackground 20s linear 2s infinite;
+    background-image: url(/wp-content/uploads/2020/01/bd_1_tablet_768_2.jpg) !important;
+}
+}
+
+
+
+
